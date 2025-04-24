@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+    <div class="container">
+        <a href="../html/trangchu.html">
+            <img src="../png/logo.png" height="130px">
+        </a>
+
+        <input type="text" id="search" placeholder="Tìm kiếm xe..." required>
+        <ul class="menu">
+            <a href="../html/diachimuahang.html">
+                <li><i class="fas fa-home"></i> Địa chỉ mua hàng </li>
+            </a>
+            <a href="../html/lienhe.html">
+                <li><i class="fas fa-phone-alt"></i> Liên Hệ</li>
+            </a>
+            <a href="../html/giohang.html">
+                <li><i class="fas fa-shopping-cart"></i> Giỏ Hàng</li>
+            </a>
+        </ul>
+    </div>
+
+    <hr>
+    <div class="background-video">
+        <video src="../png/video.mp4" autoplay loop muted></video>
+    </div>
+    <div class="trang">
+        <span>Trang Chủ</span>
+        <span>&nbsp;-&nbsp;</span>
+        <span>Đăng Nhập</span>
+    </div>
+    <div class="section">
+        <div class="section2" style="margin: auto;">
+            <h1 style="margin-left: 5px;">ĐĂNG NHẬP</h1>
+            <hr style="max-width: 315px; margin-bottom: 20px;margin-left: 7px;">
+            <div class="form-dangky">
+                <div style="margin-bottom: 15px;">
+                    <label for="emailOrPhone">Email/Số Điện Thoại</label><br>
+                    <input type="text" id="emailOrPhone" placeholder="Email hoặc Số điện thoại *">
+                    <span class="error" id="err-emailOrPhone"></span>
+                </div>
+
+                <div style="margin-bottom: 15px; position: relative;">
+                    <label for="password">Mật Khẩu</label><br>
+                    <input type="password" id="password" placeholder="Mật khẩu *">
+                    <span onclick="togglePassword('password', this)" style="position: absolute; top: 45px; right: 20px; cursor: pointer; font-size: 16px;">👁️</span>
+                    <span class="error" id="err-password"></span>
+                </div>
+                <div class="forgot-password">Quên Mật Khẩu</div>
+            </div>
+            <hr style="max-width: 315px; margin-bottom: 20px;margin-left: 7px;">
+            <button onclick="kiemTraForm()" style="margin-left: 5px;">Đăng Nhập</button>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="dia-chi-quan">
+            <h1>HỆ THỐNG XE MÁY HONDA MIỀN NAM</h1>
+            <h2><i class="fas fa-map-marker-alt" style="color: red;"></i> Showroom 1: 338 Đường Trần Hưng Đạo - Kp Đông B - Dĩ An - Bình Dương.</h2>
+            <h2><i class="fas fa-map-marker-alt" style="color: red;"></i> Showroom 2: 21A Đ. Nguyễn Ảnh Thủ - Hiệp Thành - Quận 12 - Hồ Chí Minh.</h2>
+            <h2><i class="fas fa-map-marker-alt" style="color: red;"></i> Showroom 4: 463B Nguyễn Thị Tú - Bình Hưng Hoà B - Bình Tân - Hồ Chí Minh.</h2>
+            <h2><i class="fas fa-map-marker-alt" style="color: red;"></i> Showroom 6: 720 Đ. Hùng Vương - KP. Phước Hiệp - Nhơn Trạch - Đồng Nai.</h2>
+            <h2><i class="fas fa-envelope" style="color: red;"></i> Email:xemayhondamiennam@gmail.com</h2>
+            <h2><i class="fas fa-phone-alt" style="color: red;"></i> Hotline:0921313</h2>
+        </div>
+        <div class="dia-chi-quan">
+            <h1>HỖ TRỢ KHÁCH HÀNG</h1>
+            <h2><i class="fas fa-circle" style="color: red; font-size: 8px;"></i> Hướng dẫn mua hàng</h2>
+            <h2><i class="fas fa-circle" style="color: red; font-size: 8px;"></i> Chính sách vận chuyễn</h2>
+            <h2><i class="fas fa-circle" style="color: red; font-size: 8px;"></i> Chính sách thanh toán</h2>
+            <h2><i class="fas fa-circle" style="color: red; font-size: 8px;"></i> Liên hệ</h2>
+            <img src="../png/logo-da-thong-bao-bo-cong-thuong-removebg-preview.png" width="200px">
+        </div>
+        <div class="dia-chi-quan">
+            <h1>BẢN ĐỒ</h1>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.6802424100106!2d106.71065097586974!3d10.911887756678745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174c87f5ebadb95%3A0x8492613e2aba6ae1!2zSG9uZGEgw5R0w7QgQsOsbmggRMawxqFuZyAtIFRodeG6rW4gQW4!5e0!3m2!1svi!2s!4v1744873238735!5m2!1svi!2s"
+                width="350" height="350" style="border: px solid rgb(255, 255, 255); border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <button id="scrollToTopBtn"><i class="fas fa-arrow-up"></i></button>
+</body>
+<script>
+    const scrollBtn = document.getElementById("scrollToTopBtn");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            scrollBtn.classList.add("show");
+        } else {
+            scrollBtn.classList.remove("show");
+        }
+    });
+
+    scrollBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+
+    function togglePassword(fieldId, icon) {
+        const field = document.getElementById(fieldId);
+        if (field.type === 'password') {
+            field.type = 'text';
+            icon.textContent = '🙈';
+        } else {
+            field.type = 'password';
+            icon.textContent = '👁️';
+        }
+    }
+
+    function kiemTraForm() {
+        let emailOrPhone = document.getElementById('emailOrPhone').value.trim();
+        let password = document.getElementById('password').value.trim();
+        let isValid = true;
+
+        const errEmailPhone = document.getElementById('err-emailOrPhone');
+        const errPassword = document.getElementById('err-password');
+
+
+        errEmailPhone.textContent = '';
+        errPassword.textContent = '';
+
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const phoneRegex = /^(0|\+84)(\d{9})$/;
+
+
+        if (emailOrPhone === '') {
+            errEmailPhone.textContent = 'Vui lòng nhập email hoặc số điện thoại';
+            isValid = false;
+        } else if (!emailRegex.test(emailOrPhone) && !phoneRegex.test(emailOrPhone)) {
+            errEmailPhone.textContent = 'Định dạng không hợp lệ. Nhập đúng email hoặc số điện thoại.';
+            isValid = false;
+        }
+
+
+        if (password === '') {
+            errPassword.textContent = 'Vui lòng nhập mật khẩu';
+            isValid = false;
+        }
+
+        if (isValid) {
+            alert('Thông tin hợp lệ! Tiến hành gửi...');
+
+        }
+    }
+    document.addEventListener("DOMContentLoaded", function() {
+        const cartText = document.querySelector(".fa-shopping-cart").parentNode;
+        let totalCartItems = JSON.parse(localStorage.getItem('totalCartItems')) || 0;
+
+
+        cartText.innerHTML = '<i class="fas fa-shopping-cart"></i> Giỏ Hàng (' + totalCartItems + ')';
+    });
+</script>
+
+</html>
